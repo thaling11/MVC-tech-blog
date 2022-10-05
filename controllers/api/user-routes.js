@@ -94,7 +94,8 @@ router.post("/login", (req, res) => {
 });
 
 // POST log out an existing user
-router.post("/logout", authorize, (req, res) => {
+//withAuth
+router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
