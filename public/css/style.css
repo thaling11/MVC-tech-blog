@@ -1,103 +1,144 @@
 body {
-    background-color: rgb(49, 49, 49);
-    color: rgb(0, 162, 255);
-    font-family: 'Montserrat', sans-serif;
+  background-color: rgb(49, 49, 49);
+  color: rgb(0, 162, 255);
+  font-family: "Montserrat", sans-serif;
 }
 .navbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .navbar a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .navbar li {
-    list-style: none;
-    margin: -30px 10px 20px 0px;
+  list-style: none;
+  margin: -30px 10px 20px 0px;
 }
 
 .navbar a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .navbar:visited {
-    color: white;
+  color: white;
 }
 
 .login-container {
-    display: flex;
-   width: 70%;
+  display: flex;
+  width: 70%;
 }
 
-.login-form, .signup-form {
-    margin: 50px 50px;
-    width: 50%;
+.login-form,
+.signup-form {
+  margin: 50px 50px;
+  width: 50%;
 }
 
 .post {
-    border: 2px solid white;
-    padding: 10px;
+  border: 2px solid white;
+  padding: 10px;
 }
 
 .post-text {
-    color: white;
-    margin-left: 10px;
+  color: white;
+  margin-left: 10px;
 }
 
 .title a {
-    text-decoration: none;
-    color:rgb(123, 118, 228);
-    margin: 0px 10px;
-    font-size: 17px;
+  text-decoration: none;
+  color: rgb(123, 118, 228);
+  margin: 0px 10px;
+  font-size: 17px;
 }
 
 .comments {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .homepage-posts {
-    list-style: none;
-    margin: 100px 20px;
+  list-style: none;
+  margin: 100px 20px;
 }
 
 .dashboard-posts {
-    list-style: none;
-    margin: 30px 20px;
+  list-style: none;
+  margin: 30px 20px;
 }
 
 .edit-post {
-    color: white;
-    background-color: rgb(123, 118, 228);
-    padding: 5px;
-    text-decoration: none;
+  color: white;
+  background-color: rgb(123, 118, 228);
+  padding: 5px;
+  text-decoration: none;
 }
 
-.submit-btn {
-    color: white;
-    background-color: rgb(123, 118, 228);
-    border: none;
-    padding: 5px;
-    margin: 5px 50px;
-    font-size: 16px;
+.submit-btn,
+.save-changes-btn,
+.delete-post-btn,
+.comment-btn {
+  color: white;
+  background-color: rgb(123, 118, 228);
+  border: none;
+  padding: 5px;
+  margin: 5px 50px;
+  font-size: 16px;
+  width: 130px;
 }
 
-#post-title, #post-text {
-    width: 400px;
+.submit-btn:hover,
+.save-changes-btn:hover,
+.delete-post-btn:hover,
+.comment-btn {
+  cursor: pointer;
+}
+
+.comment-btn {
+    margin-left: 80px;
+    margin-top: 5px;
+}
+
+.edit-post-form {
+  margin: 20px;
+}
+
+.comment-body {
+    width: 300px;
+    height: 100px;
+    margin-left: 80px;
+    margin-top: 5px;
+}
+
+#post-title,
+#post-text {
+  width: 400px;
 }
 
 #post-title {
-    height: 30px;
-    margin-bottom: 5px;
+  height: 30px;
+  margin-bottom: 5px;
 }
 
 #post-text {
-    height: 80px;
+  height: 80px;
 }
 
 .new-post-form {
-    margin-left: 50px;
-    margin-bottom: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+.comments {
+    color: rgb(184, 184, 184);
+    margin: 5px;
+}
+
+.comment {
+    margin-left: 70px;
+    margin-right: 200px;
+    padding: 20px;
+    border: 1px solid rgb(236, 233, 233);
 }
