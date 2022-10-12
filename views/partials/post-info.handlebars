@@ -1,7 +1,7 @@
+    <a id="post-link" href="/post/{{id}}">
 <div class="post">
-  <div class="title">
-    <a href="/post/{{id}}">
-      {{title}}</a>
+  <div id="post-title">
+      <span style="color:rgb(123, 118, 228)">{{title}}</span>
     {{user.username}}
 
     {{format_date created_at}}<br/>
@@ -14,3 +14,4 @@
     {{format_plural "comment" comments.length}}
   </div>
 </div>
+  </a>

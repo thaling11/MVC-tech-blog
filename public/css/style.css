@@ -35,7 +35,24 @@ body {
 .login-form,
 .signup-form {
   margin: 50px 50px;
+  padding: 50px;
   width: 50%;
+  text-align: center;
+  border: 2px solid white;
+}
+
+label {
+    display: block;
+}
+
+#email-signup, 
+#username-signup, 
+#password-signup,
+#password-login,
+#email-login {
+    height: 30px;
+    width: 150px;
+    margin: 5px;
 }
 
 .post {
@@ -120,10 +137,15 @@ body {
 #post-title {
   height: 30px;
   margin-bottom: 5px;
+  color:rgb(0, 162, 255);
 }
 
 #post-text {
   height: 80px;
+}
+
+#post-link {
+    text-decoration: none;
 }
 
 .new-post-form {
