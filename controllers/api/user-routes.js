@@ -1,13 +1,13 @@
 const router = require("express").Router();
 const { User, Post, Comment } = require("../../models");
-const withAuth = require("../../utils/auth");
+// const withAuth = require("../../utils/auth");
 
 //GET all
 router.get("/", (req, res) => {
   User.findAll({
     attributes: { exclude: ["password"] },
   })
-    .then((data) => res.json(data))
+    .then(data => res.json(data))
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
@@ -24,7 +24,7 @@ router.get("/:id", (req, res) => {
     include: [
       {
         model: Post,
-        attributes: ["id", "title", "post_text", "created_at"],
+        attributes: ["id", "title", "post_text", "created_at"]
       },
       {
         model: Comment,
@@ -36,14 +36,14 @@ router.get("/:id", (req, res) => {
       },
     ],
   })
-    .then((data) => {
+    .then(data => {
       if (!data) {
         res.status(404).json({ message: "No user found with this id" });
         return;
       }
       res.json(data);
     })
-    .catch((err) => {
+    .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
@@ -77,7 +77,7 @@ router.post("/login", (req, res) => {
     where: {
       email: req.body.email,
     },
-  }).then((data) => {
+  }).then(data => {
     if (!data) {
       res
         .status(400)
@@ -89,12 +89,16 @@ router.post("/login", (req, res) => {
       res.status(400).json({ message: "Incorrect password!" });
       return;
     }
-    res.json({ user: data, message: "Success!" });
+    req.session.save(() => {
+      req.session.user_id = data.id;
+      req.session.username = data.username;
+      req.session.loggedIn = true;
+      res.json({ user: data, message: "Success!" });
+    })
   });
 });
 
 // POST log out an existing user
-//withAuth
 router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
