@@ -78,6 +78,7 @@ router.post("/login", (req, res) => {
       email: req.body.email,
     },
   }).then(data => {
+    console.log(data);
     if (!data) {
       res
         .status(400)

@@ -13,12 +13,12 @@ const commentInput = [
   },
   {
     comment_text: "You need to wrap app.listen in sequalize.sync({ force: false }).then(() => {... });",
-    post_id: 4,
+    post_id: 2,
     user_id: 2
   },
   {
     comment_text: "Don't forget to add the route: 'const sequelize = require('./config/connection')';",
-    post_id: 4,
+    post_id: 2,
     user_id: 3
   }
 ];
