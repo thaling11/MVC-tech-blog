@@ -16,6 +16,14 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 
 The following animation demonstrates the application functionality:
 
-![screenshot](./Assets/14-mvc-homework-demo-01.gif) 
+![screenshot](./Assets/images/homepage.jpg)
+![screenshot](./Assets/images/login-screenshot.jpg)
+![screenshot](./Assets/images/welcome-dashboard.jpg)
+
 
 ## Delopyed link
+https://mvc-tech-blog-th.herokuapp.com/
+
+
+## Github link
+https://github.com/thaling11/MVC-tech-blog
